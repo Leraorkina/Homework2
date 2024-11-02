@@ -1,0 +1,12 @@
+from collections import deque
+
+first_list = deque([1, 3, 5, 7])
+second_list = deque([2, 4, 6, 8])
+third_list = deque()
+while first_list and second_list:
+    third_list.append(first_list.popleft())
+    third_list.append(second_list.popleft())
+third_list.extend(first_list)
+third_list.extend(second_list)
+
+print(third_list)
